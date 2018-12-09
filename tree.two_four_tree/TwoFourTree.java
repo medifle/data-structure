@@ -669,7 +669,7 @@ public class TwoFourTree extends StringSSet implements LevelOrderTraversal {
         if (fi < ti) {
             addData(to, removeData(from.parent, from.parent.data[fi]));
             addData(from.parent, removeLast(from));
-            transferChild = removelastChild(from); // resolve "from" node child binding
+            transferChild = removeLastChild(from); // resolve "from" node child binding
         } else if (ti < fi) {
             addData(to, removeData(from.parent, from.parent.data[ti]));
             addData(from.parent, removeFirst(from));
@@ -718,7 +718,7 @@ public class TwoFourTree extends StringSSet implements LevelOrderTraversal {
      * @param u
      * @return the removed node
      */
-    protected Node removelastChild(Node u) {
+    protected Node removeLastChild(Node u) {
         Node[] tempChildren = new Node[4];
         System.arraycopy(u.children, 0, tempChildren, 0, 4);
         Arrays.fill(u.children, NIL);
