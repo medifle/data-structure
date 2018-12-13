@@ -7,6 +7,8 @@ import java.util.*;
  * The tree stores Strings as values.
  * It extends the (modified) sorted set interface (for strings).
  * It implements the LevelOrderTraversal interface.
+ * @author medifle
+ *
  */
 public class TwoFourTree extends StringSSet implements LevelOrderTraversal {
     /**
